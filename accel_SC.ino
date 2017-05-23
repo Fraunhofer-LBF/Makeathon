@@ -6,24 +6,31 @@
 #include <Adafruit_Sensor.h>
 
 // Used for software I2C
-//#define LIS3DH_CLK 21 //Board-Pin "SCL" (Feather M0) connected to Sensor-Pin (LIS3DH) "SCL"
-//#define LIS3DH_MOSI 20 //Board-Pin "SDA" (Feather M0) connected to Sensor-Pin (LIS3DH) "SDA"
-
+//#define LIS3DH_CLK 9 
+//#define LIS3DH_MOSI 10 
 
 // Used for software SPI
-#define LIS3DH_CLK 24   //Board-Pin "SCK" (Feather M0) connected to Sensor-Pin (LIS3DH) "SCL"
-#define LIS3DH_MISO 22  //Board-Pin "MISO" (Feather M0) connected to Sensor-Pin (LIS3DH) "SDO"
-#define LIS3DH_MOSI 23  //Board-Pin "MOSI" (Feather M0) connected to Sensor-Pin (LIS3DH) "SDA"
+//#define LIS3DH_CLK 13
+//#define LIS3DH_MISO 12
+//#define LIS3DH_MOSI 11
+
 // Used for hardware & software SPI
 #define LIS3DH_CS 5 ////Board-Pin "5"(choose any I/O-Pin from the Feather M0) connected to Sensor-Pin (LIS3DH) "CS"
 
 
 // software SPI
 //Adafruit_LIS3DH lis = Adafruit_LIS3DH(LIS3DH_CS, LIS3DH_MOSI, LIS3DH_MISO, LIS3DH_CLK);
+
 // hardware SPI
 Adafruit_LIS3DH lis = Adafruit_LIS3DH(LIS3DH_CS); //Used for SPI
-// I2C
+//Board-Pin 24 "SCK" (Feather M0) connected to Sensor-Pin (LIS3DH) "SCL"
+//Board-Pin 22 "MISO" (Feather M0) connected to Sensor-Pin (LIS3DH) "SDO"
+//Board-Pin 23 "MOSI" (Feather M0) connected to Sensor-Pin (LIS3DH) "SDA"
+
+// Used for hardware & software I2C
 //Adafruit_LIS3DH lis = Adafruit_LIS3DH(); //Used for I2C
+//Board-Pin 21 "SCL" (Feather M0) connected to Sensor-Pin (LIS3DH) "SCL"
+//Board-Pin 20 "SDA" (Feather M0) connected to Sensor-Pin (LIS3DH) "SDA"
 
 #if defined(ARDUINO_ARCH_SAMD)
 // for Zero, output on USB Serial console, remove line below if using programming port to program the Zero!
