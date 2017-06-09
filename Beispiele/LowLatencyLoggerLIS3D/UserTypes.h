@@ -3,7 +3,7 @@
 #include "Arduino.h"
 #include "SPI.h"
 #define USE_SHARED_SPI 1
-#define FILE_BASE_NAME "LIS3DH16G"
+#define FILE_BASE_NAME "LIS16G"
 // User data types.  Modify for your data items.
 const uint8_t ACCEL_DIM = 3;
 struct data_t {
